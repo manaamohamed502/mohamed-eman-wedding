@@ -70,18 +70,6 @@ body {
 }
 
 
-/* طبقة التعتيم */
-.section-content::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background: rgba(0,0,0,.45);
-
-    z-index: 0;
-    pointer-events: none;
-}
 
 
 /* نخلي المحتوى فوق الصورة */
@@ -90,48 +78,47 @@ body {
     z-index: 1;
 }
 
-
 /* =====================================================
    BACKGROUND IMAGES
 ===================================================== */
 
-/* الكارت الأول */
 .names-section .section-content {
-    background-image: url("images/Invite.jpeg");
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("./images/Invite.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-
-/* الكارت الثاني */
 .date-section .section-content {
-    background-image: url("images/Time.jpeg");
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.60)
+        ),
+        url("./images/Time.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+.details-section .section-content {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.60)
+        ),
+        url("./images/Details.jpeg");
 
-/* الكارت الثالث */
-.invitation-section:not(.names-section):not(.date-section) .section-content {
-    background-image: url("images/details.jpeg");
-}
-
-
-/* =====================================================
-   IMAGE DARKNESS
-===================================================== */
-
-/* الأول - أفتح */
-.names-section .section-content::before {
-    background: rgba(0,0,0,.15);
-}
-
-
-/* الثاني - أغمق */
-.date-section .section-content::before {
-    background: rgba(0,0,0,.60);
-}
-
-
-/* الثالث - أغمق */
-.invitation-section:not(.names-section):not(.date-section) .section-content::before {
-    background: rgba(0,0,0,.60);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -1176,47 +1163,4 @@ body {
 .date-section {
     padding-top: 20px;
     padding-bottom: 20px;
-}/* =========================
-   BACKGROUND IMAGES
-========================= */
-
-.names-section .section-content {
-    background-image:
-        linear-gradient(
-            rgba(0,0,0,.15),
-            rgba(0,0,0,.15)
-        ),
-        url("./images/Invite.jpeg") !important;
-
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-}
-
-
-.date-section .section-content {
-    background-image:
-        linear-gradient(
-            rgba(0,0,0,.60),
-            rgba(0,0,0,.60)
-        ),
-        url("./images/Time.jpeg") !important;
-
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-}
-
-
-.details-section .section-content {
-    background-image:
-        linear-gradient(
-            rgba(0,0,0,.60),
-            rgba(0,0,0,.60)
-        ),
-        url("./images/Detail.jpeg") !important;
-
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
 }
