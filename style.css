@@ -83,44 +83,25 @@ body {
 ===================================================== */
 
 .names-section .section-content {
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.15),
-            rgba(0, 0, 0, 0.15)
-        ),
-        url("./images/Invite.jpeg");
-
+    background-image: url("./images/Invite.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .date-section .section-content {
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.60),
-            rgba(0, 0, 0, 0.60)
-        ),
-        url("./images/Time.jpeg");
-
+    background-image: url("./images/Time.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .details-section .section-content {
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.60),
-            rgba(0, 0, 0, 0.60)
-        ),
-        url("./images/Details.jpeg");
-
+    background-image: url("./images/Details.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 
 /* =====================================================
    ARABIC TEXT
