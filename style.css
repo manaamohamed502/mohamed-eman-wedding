@@ -1145,3 +1145,27 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+/* =====================================================
+   DETAILS CARD FIX
+===================================================== */
+
+.details-section #countdown {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.details-section #countdown div {
+    width: 70px;
+    min-width: 70px;
+}
+
+/* LOCATION IMAGE */
+.details-section img[alt="Wedding Location"] {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
