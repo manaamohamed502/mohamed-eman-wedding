@@ -1,0 +1,1179 @@
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #0b0b0b;
+    color: #fff;
+    font-family: Georgia, serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   INVITATION SECTIONS
+===================================================== */
+
+.invitation-section {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #242424 0%,
+            #0b0b0b 75%
+        );
+}
+
+.section-content {
+    position: relative;
+    overflow: hidden;
+
+    width: min(90%, 650px);
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 30px;
+
+    border: 1px solid rgba(212,175,55,.6);
+    border-radius: 8px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.7),
+        0 0 25px rgba(212,175,55,.15);
+}
+
+
+/* طبقة التعتيم */
+.section-content::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,.45);
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* نخلي المحتوى فوق الصورة */
+.section-content > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =====================================================
+   BACKGROUND IMAGES
+===================================================== */
+
+/* الكارت الأول */
+.names-section .section-content {
+    background-image: url("images/Invite.jpeg");
+}
+
+
+/* الكارت الثاني */
+.date-section .section-content {
+    background-image: url("images/Time.jpeg");
+}
+
+
+/* الكارت الثالث */
+.invitation-section:not(.names-section):not(.date-section) .section-content {
+    background-image: url("images/details.jpeg");
+}
+
+
+/* =====================================================
+   IMAGE DARKNESS
+===================================================== */
+
+/* الأول - أفتح */
+.names-section .section-content::before {
+    background: rgba(0,0,0,.15);
+}
+
+
+/* الثاني - أغمق */
+.date-section .section-content::before {
+    background: rgba(0,0,0,.60);
+}
+
+
+/* الثالث - أغمق */
+.invitation-section:not(.names-section):not(.date-section) .section-content::before {
+    background: rgba(0,0,0,.60);
+}
+
+
+/* =====================================================
+   ARABIC TEXT
+===================================================== */
+
+.section-small {
+    font-family: 'Amiri', serif;
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #d4af37;
+
+    margin: 0 0 15px;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.8);
+}
+
+.section-content h1 {
+    font-family: 'Amiri', serif;
+    font-size: 42px;
+    font-weight: 700;
+
+    color: #d4af37;
+
+    margin: 10px 0 25px;
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,.8);
+}
+
+.section-text {
+    font-family: 'Amiri', serif;
+    font-size: 32px;
+    line-height: 2;
+
+    color: #d4af37;
+
+    margin: 0;
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,.9);
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.date-section h1 {
+    font-size: 52px;
+}
+
+.event-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+    margin-top: 25px;
+
+    font-family: 'Amiri', serif;
+    font-size: 34px;
+
+    color: #fff;
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,.9);
+}
+
+.time-line {
+    color: #d4af37;
+}
+
+
+/* =====================================================
+   COUPLE NAMES
+===================================================== */
+
+.names-section {
+    min-height: 100vh;
+    padding: 80px 20px;
+}
+
+.names-content {
+    min-height: 80vh;
+}
+
+
+/* YOU ARE INVITED */
+
+.names-section .welcome {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+    letter-spacing: 5px;
+
+    color: #0c0a01;
+
+    margin-bottom: 45px;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation:
+        welcomeIn 1s ease forwards;
+
+    animation-delay: .3s;
+}
+
+
+/* الأسماء */
+
+.couple-names {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    direction: ltr;
+
+    margin: 10px 0 30px;
+}
+
+
+/* MOHAMED */
+
+.groom-name {
+    font-family: 'Aref Ruqaa', serif !important;
+
+    font-size: 62px !important;
+    font-weight: 400 !important;
+
+    color: #d4af37 !important;
+
+    margin: 0 !important;
+
+    opacity: 0;
+
+    transform: translateX(-120px);
+
+    filter: blur(8px);
+
+    animation:
+        cinematicMohamed 6s cubic-bezier(.16,1,.3,1)
+        .5s forwards;
+}
+
+
+/* EMAN */
+
+.bride-name {
+    font-family: 'Aref Ruqaa', serif !important;
+
+    font-size: 62px !important;
+    font-weight: 400 !important;
+
+    color: #d4af37 !important;
+
+    margin: 0 !important;
+
+    opacity: 0;
+
+    transform: translateX(120px);
+
+    filter: blur(8px);
+
+    animation:
+        cinematicEman 6s cubic-bezier(.16,1,.3,1)
+        .8s forwards;
+}
+
+
+/* HEART */
+
+.name-heart {
+    font-family: Georgia, serif;
+
+    font-size: 52px;
+
+    color: #954848;
+
+    line-height: 1;
+
+    opacity: 0;
+
+    transform: scale(0);
+
+    filter: blur(5px);
+
+    animation:
+        cinematicHeart 6s cubic-bezier(.16,1,.3,1)
+        1.6s forwards;
+
+    text-shadow:
+        0 0 5px rgba(212,175,55,.4),
+        0 0 20px rgba(212,175,55,.35),
+        0 0 40px rgba(212,175,55,.15);
+}
+
+
+/* =====================================================
+   INVITATION MESSAGE
+===================================================== */
+
+.names-section .invitation-text {
+    max-width: 600px;
+
+    font-family: 'Amiri', serif;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    line-height: 1.8;
+
+    color: #d4af37;
+
+    margin-top: 30px;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    animation:
+        messageIn 5s ease forwards;
+
+    animation-delay: 1s;
+
+    text-shadow:
+        0 0 8px rgba(212,175,55,.3),
+        0 2px 10px rgba(0,0,0,.9);
+}
+
+
+/* =====================================================
+   DETAILS
+===================================================== */
+
+.details {
+    margin-top: 20px;
+
+    line-height: 1.8;
+    font-size: 17px;
+
+    color: #fff;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.9);
+}
+
+.names-section .details {
+    width: 100%;
+}
+
+
+/* =====================================================
+   LOCATION BUTTON
+===================================================== */
+
+.location-button {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 28px;
+
+    border: 1px solid #d4af37;
+    border-radius: 30px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    background: rgba(0,0,0,.45);
+
+    transition: .3s;
+}
+
+.location-button:hover {
+    background: #d4af37;
+    color: #111;
+}
+
+
+/* =====================================================
+   LOCATION IMAGE
+===================================================== */
+
+.names-section .map-preview {
+    width: 85%;
+    max-width: 450px;
+
+    height: 180px;
+
+    margin: 25px auto 0;
+
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.7),
+        0 0 25px rgba(212,175,55,.18);
+}
+
+.names-section .map-preview img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+#countdown {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+#countdown div {
+    width: 70px;
+
+    padding: 12px 5px;
+
+    border: 1px solid rgba(255,255,255,.6);
+
+    border-radius: 10px;
+
+    background: rgba(0,0,0,.45);
+
+    backdrop-filter: blur(5px);
+}
+
+#countdown span {
+    display: block;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#countdown small {
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    opacity: .8;
+}
+
+
+/* =====================================================
+   CINEMATIC ANIMATIONS
+===================================================== */
+
+@keyframes welcomeIn {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes cinematicMohamed {
+
+    0% {
+        opacity: 0;
+
+        transform: translateX(-120px);
+
+        filter: blur(8px);
+    }
+
+    60% {
+        opacity: 1;
+
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform: translateX(0);
+
+        filter: blur(0);
+    }
+
+}
+
+
+@keyframes cinematicEman {
+
+    0% {
+        opacity: 0;
+
+        transform: translateX(120px);
+
+        filter: blur(8px);
+    }
+
+    60% {
+        opacity: 1;
+
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform: translateX(0);
+
+        filter: blur(0);
+    }
+
+}
+
+
+@keyframes cinematicHeart {
+
+    0% {
+        opacity: 0;
+
+        transform: scale(0);
+
+        filter: blur(5px);
+    }
+
+    60% {
+        opacity: 1;
+
+        transform: scale(1.25);
+
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform: scale(1);
+
+        filter: blur(0);
+    }
+
+}
+
+
+@keyframes messageIn {
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   LUXURY ENVELOPE
+===================================================== */
+
+#intro {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #0b0b0b;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+.envelope {
+    position: relative;
+
+    width: min(85vw, 700px);
+
+    height: min(58vw, 460px);
+
+    max-height: 70vh;
+
+    cursor: pointer;
+
+    perspective: 1200px;
+
+    overflow: visible;
+}
+
+
+/* =====================================================
+   ENVELOPE BODY
+===================================================== */
+
+.envelope-body {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 5;
+
+    background:
+        linear-gradient(
+            135deg,
+            #292929 0%,
+            #111 45%,
+            #252525 70%,
+            #090909 100%
+        );
+
+    border: 2px solid #d4af37;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.85),
+        0 0 35px rgba(212,175,55,.2),
+        inset 0 0 35px rgba(255,255,255,.03);
+
+    overflow: visible;
+}
+
+.envelope-body::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 1px solid rgba(212,175,55,.45);
+
+    border-radius: 4px;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   ENVELOPE FLAP
+===================================================== */
+
+.envelope-flap {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: min(42.5vw,350px) solid transparent;
+    border-right: min(42.5vw,350px) solid transparent;
+
+    border-top: min(20vw,160px) solid #292929;
+
+    z-index: 8;
+
+    transform-origin: top center;
+
+    transition:
+        transform 1.2s ease;
+
+    filter:
+        drop-shadow(
+            0 2px 2px rgba(0,0,0,.5)
+        );
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+
+/* =====================================================
+   WAX SEAL
+===================================================== */
+
+.wax-seal {
+    position: absolute !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    transform:
+        translate(-50%,-50%) !important;
+
+    width: 95px !important;
+    height: 95px !important;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #e6c15a,
+            #a67c00 70%
+        );
+
+    border: 4px solid #d4af37;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: #fff1a8;
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    z-index: 100 !important;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.7),
+        0 0 30px rgba(212,175,55,.35);
+
+    text-shadow:
+        0 2px 4px rgba(0,0,0,.7);
+
+    transition:
+        transform .3s ease,
+        opacity .5s ease;
+}
+
+.envelope:hover .wax-seal {
+    transform:
+        translate(-50%,-50%)
+        scale(1.06) !important;
+}
+
+.envelope.open .wax-seal {
+    opacity: 0;
+}
+
+
+/* =====================================================
+   ENVELOPE TITLE
+===================================================== */
+
+.envelope-title {
+    position: absolute;
+
+    left: 50%;
+
+    top: calc(50% + 72px);
+
+    transform: translateX(-50%);
+
+    font-family: 'Amiri', serif;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #d4af37;
+
+    white-space: nowrap;
+
+    letter-spacing: 1px;
+
+    z-index: 20;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.8),
+        0 0 12px rgba(212,175,55,.3);
+}
+
+
+/* =====================================================
+   INVITATION PAPER INSIDE ENVELOPE
+===================================================== */
+
+.invitation-paper {
+    position: absolute;
+
+    width: calc(100% - 50px);
+
+    height: calc(100% - 50px);
+
+    left: 25px;
+    top: 25px;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.12),
+            rgba(255,255,255,.12)
+        ),
+        url("images/card-bg.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    border: 2px solid #d4af37;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.4),
+        inset 0 0 0 8px rgba(255,255,255,.15);
+
+    color: white;
+
+    transform: translateY(0);
+
+    transition:
+        transform 1.2s cubic-bezier(.2,.8,.2,1);
+}
+
+.envelope.open .invitation-paper {
+    z-index: 10;
+
+    transform: translateY(-35%);
+}
+
+
+/* =====================================================
+   ENVELOPE CARD NAMES
+===================================================== */
+
+.names {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    direction: rtl;
+}
+
+.names span {
+    font-family: 'Aref Ruqaa', serif;
+
+    font-size: 52px;
+
+    font-weight: 700;
+
+    color: #f5d77a;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.8);
+}
+
+.names .heart {
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    color: #d4af37;
+}
+
+.quran-verse {
+    margin-top: 18px;
+
+    font-family: 'Amiri', serif;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    color: #fff8dc;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.8);
+}
+
+
+/* =====================================================
+   ENVELOPE DECORATION
+===================================================== */
+
+.invitation-paper::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 12px;
+    left: 18px;
+
+    font-size: 24px;
+
+    color: #d4af37;
+}
+
+.invitation-paper::after {
+    content: "✦";
+
+    position: absolute;
+
+    bottom: 12px;
+    right: 18px;
+
+    font-size: 24px;
+
+    color: #d4af37;
+}
+
+
+/* =====================================================
+   INTRO HIDE
+===================================================== */
+
+#intro.hide {
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity .7s ease,
+        visibility .7s ease;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .invitation-section {
+        padding: 40px 15px;
+    }
+
+    .section-content {
+        width: 92%;
+
+        min-height: 430px;
+
+        padding: 35px 20px;
+    }
+
+    .section-content h1 {
+        font-size: 35px;
+    }
+
+    .section-small {
+        font-size: 27px;
+    }
+
+    .section-text {
+        font-size: 23px;
+    }
+
+    .names-section {
+        padding: 50px 15px;
+    }
+
+    .couple-names {
+        gap: 12px;
+    }
+
+    .groom-name,
+    .bride-name {
+        font-size: 43px !important;
+    }
+
+    .name-heart {
+        font-size: 40px;
+    }
+
+    .names-section .welcome {
+        font-size: 13px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 35px;
+    }
+
+    .names-section .invitation-text {
+        font-size: 23px;
+    }
+
+    .event-time {
+        font-size: 25px;
+
+        gap: 10px;
+    }
+
+    .names-section .map-preview {
+        width: 85%;
+
+        height: 180px;
+    }
+
+    .envelope {
+        width: 90vw;
+
+        height: 60vw;
+    }
+
+    .names span {
+        font-size: 40px;
+    }
+
+    .quran-verse {
+        font-size: 22px;
+    }
+
+    .envelope-title {
+        font-size: 25px;
+    }
+
+    .wax-seal {
+        width: 75px !important;
+        height: 75px !important;
+
+        font-size: 30px;
+    }
+}/* =====================================================
+   SCROLL HINT - FIRST CARD
+===================================================== */
+
+.scroll-hint {
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #d4af37;
+
+    opacity: 0;
+
+    animation:
+        scrollHintIn 1s ease forwards,
+        scrollHintFloat 1.8s ease-in-out infinite;
+
+    animation-delay: 2.4s, 3.4s;
+
+    text-shadow:
+        0 0 10px rgba(212,175,55,.4);
+}
+
+.scroll-hint span {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 5px;
+}
+
+.scroll-arrow {
+    font-size: 32px;
+
+    line-height: 1;
+
+    font-weight: 500;
+}
+
+
+@keyframes scrollHintIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes scrollHintFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+}
+
+
+/* =====================================================
+   REDUCE SPACE BETWEEN PAGES
+===================================================== */
+
+.invitation-section {
+    min-height: 100vh;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* أول وآخر صفحة */
+.names-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.date-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
