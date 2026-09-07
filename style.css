@@ -1176,4 +1176,47 @@ body {
 .date-section {
     padding-top: 20px;
     padding-bottom: 20px;
+}/* =========================
+   BACKGROUND IMAGES
+========================= */
+
+.names-section .section-content {
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.15),
+            rgba(0,0,0,.15)
+        ),
+        url("./images/Invite.jpeg") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+
+.date-section .section-content {
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.60),
+            rgba(0,0,0,.60)
+        ),
+        url("./images/Time.jpeg") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+
+.details-section .section-content {
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.60),
+            rgba(0,0,0,.60)
+        ),
+        url("./images/Detail.jpeg") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
