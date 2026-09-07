@@ -17,48 +17,56 @@
 </head>
 
 <body>
- <!-- تفاصيل الدعوة -->
-<section class="invitation-section names-section">
 
-    <div class="section-content names-content">
+    <!-- =====================================================
+         الصفحة الأولى: الأسماء
+    ====================================================== -->
 
-        <p class="welcome">
-            YOU ARE INVITED
-        </p>
+    <section class="invitation-section names-section">
 
-        <div class="couple-names">
+        <div class="section-content names-content">
 
-            <h1 class="groom-name">
-                Mohamed
-            </h1>
+            <p class="welcome">
+                YOU ARE INVITED
+            </p>
 
-            <div class="name-heart">
-                ♥
+            <div class="couple-names">
+
+                <h1 class="groom-name">
+                    Mohamed
+                </h1>
+
+                <div class="name-heart">
+                    ♥️
+                </div>
+
+                <h1 class="bride-name">
+                    Eman
+                </h1>
+
             </div>
 
-            <h1 class="bride-name">
-                Eman
-            </h1>
-
-        </div>
-
-        <p class="invitation-text">
-        يُسْعِدُنَا وَيُشَرِّفُنَا دَعْوَتُكُمْ
+            <p class="invitation-text">
+                يُسْعِدُنَا وَيُشَرِّفُنَا دَعْوَتُكُمْ
                 لِحُضُورِ عَقْدِ قِرَانِنَا
-        </p>
-        <div class="scroll-hint">
-          <span>SCROLL</span>
-          <div class="scroll-arrow">↓</div>
+            </p>
+
+            <!-- إشارة النزول -->
+            <div class="scroll-hint">
+                <span>SCROLL</span>
+                <div class="scroll-arrow">↓</div>
+            </div>
+
         </div>
-     </div>
 
-        
-</section> 
+    </section>
 
-    
 
- <!-- الصفحة الثانية: الموعد -->
-<section class="invitation-section date-section">
+    <!-- =====================================================
+         الصفحة الثانية: الموعد
+    ====================================================== -->
+
+    <section class="invitation-section date-section">
 
         <div class="section-content">
 
@@ -75,110 +83,158 @@
             </p>
 
             <div class="event-time">
-                <span>٣:٠٠ مساءً</span>
-                <span class="time-line">—</span>
-                <span>٦:٠٠ مساءً</span>
+
+                <span>
+                    ٣:٠٠ مساءً
+                </span>
+
+                <span class="time-line">
+                    —
+                </span>
+
+                <span>
+                    ٦:٠٠ مساءً
+                </span>
+
             </div>
 
         </div>
 
-</section>
+    </section>
 
- <!-- الصفحة الثالثة -->
-<section class="invitation-section">
 
-    <div class="section-content">
+    <!-- =====================================================
+         الصفحة الثالثة: التفاصيل
+    ====================================================== -->
+
+    <section class="invitation-section details-section">
+
+        <div class="section-content">
 
             <p class="section-small">
                 بِكُلِّ حُبٍّ
             </p>
 
-
             <p class="section-text">
-               بِكُمُ سَيَكتَمِلُ الفَرَحُ
+                بِكُمُ سَيَكتَمِلُ الفَرَحُ
             </p>
 
-        
             <div class="details">
 
-            <p>Sama Hall</p>
-            <p>Quesna City</p> 
-            <p>view location</p>
-        <div style="
-           width: 85%;
-           max-width: 450px;
-           height: 180px;
-           margin: 25px auto 0;
-           border: 2px solid #d4af37;
-           border-radius: 10px;
-           overflow: hidden;
-         ">
+                <p>
+                    Sama Hall
+                </p>
 
-           <a
-             href="https://maps.app.goo.gl/gpDQMfUdVRqxVugMA?g_st=iw"
-             target="_blank"
-             style="display:block; width:100%; height:100%;">
+                <p>
+                    Quesna City
+                </p>
 
-             <img
-              src="images/location.png"
-              alt="Wedding Location"
-              style="
-                width:100%;
-                height:100%;
-                display:block;
-                object-fit:cover;
-               "
-             >
+                <p>
+                    view location
+                </p>
 
-            </a>
+                <!-- الموقع -->
+
+                <div style="
+                    width: 85%;
+                    max-width: 450px;
+                    height: 180px;
+                    margin: 25px auto 0;
+                    border: 2px solid #d4af37;
+                    border-radius: 10px;
+                    overflow: hidden;
+                ">
+
+                    <a
+                        href="https://maps.app.goo.gl/gpDQMfUdVRqxVugMA?g_st=iw"
+                        target="_blank"
+                        style="
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        "
+                    >
+
+                        <img
+                            src="images/location.png"
+                            alt="Wedding Location"
+                            style="
+                                width: 100%;
+                                height: 100%;
+                                display: block;
+                                object-fit: cover;
+                            "
+                        >
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 العد التنازلي
+            ================================================== -->
+
+            <div id="countdown">
+
+                <div>
+                    <span id="days">00</span>
+                    <small>Days</small>
+                </div>
+
+                <div>
+                    <span id="hours">00</span>
+                    <small>Hours</small>
+                </div>
+
+                <div>
+                    <span id="minutes">00</span>
+                    <small>Minutes</small>
+                </div>
+
+                <div>
+                    <span id="seconds">00</span>
+                    <small>Seconds</small>
+                </div>
+
+            </div>
 
         </div>
-    </div>
 
-        <div id="countdown"> 
-
-            <div>
-                <span id="days">00</span>
-                <small>Days</small>
-            </div>
-
-            <div>
-                <span id="hours">00</span>
-                <small>Hours</small>
-            </div>
-
-            <div>
-                <span id="minutes">00</span>
-                <small>Minutes</small>
-            </div>
-
-            <div>
-                <span id="seconds">00</span>
-                <small>Seconds</small>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-   
-
-</div> 
+    </section>
 
 
-    <!-- الظرف -->
+    <!-- =====================================================
+         الظرف
+    ====================================================== -->
+
     <div id="intro">
 
-        <div class="envelope" onclick="openInvitation()">
+        <div
+            class="envelope"
+            onclick="openInvitation()"
+        >
 
-            <!-- الكارت -->
+            <!-- الكارت داخل الظرف -->
+
             <div class="invitation-paper">
 
                 <div class="names">
-                    <span>محمد</span>
-                    <span class="heart">♥️</span>
-                    <span>إيمان</span>
+
+                    <span>
+                        محمد
+                    </span>
+
+                    <span class="heart">
+                        ♥️
+                    </span>
+
+                    <span>
+                        إيمان
+                    </span>
+
                 </div>
 
                 <div class="quran-verse">
@@ -189,10 +245,12 @@
 
 
             <!-- غطاء الظرف -->
+
             <div class="envelope-flap"></div>
 
 
             <!-- جسم الظرف -->
+
             <div class="envelope-body">
 
                 <div class="wax-seal">
@@ -213,4 +271,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
