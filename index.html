@@ -5,271 +5,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mohamed & Eman</title>
+    <title>دعوة زفاف محمد وإيمان</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- =====================================================
-         الصفحة الأولى: الأسماء
-    ====================================================== -->
+    <!-- الظرف -->
 
-    <section class="invitation-section names-section">
+    <div id="envelope-screen">
 
-        <div class="section-content names-content">
+        <div class="envelope-container">
 
-            <p class="welcome">
-                YOU ARE INVITED
-            </p>
+            <img
+                src="./images/envelope.jpeg"
+                style="width: 300px;height: auto;display: block;"
+                alt="Envelope"
+            >
 
-            <div class="couple-names">
-
-                <h1 class="groom-name">
-                    Mohamed
-                </h1>
-
-                <div class="name-heart">
-                    ♥️
-                </div>
-
-                <h1 class="bride-name">
-                    Eman
-                </h1>
-
+            <div class="initials">
+                open invitation
             </div>
 
-            <p class="invitation-text">
-                يُسْعِدُنَا وَيُشَرِّفُنَا دَعْوَتُكُمْ
-                لِحُضُورِ عَقْدِ قِرَانِنَا
-            </p>
-
-            <!-- إشارة النزول -->
-            <div class="scroll-hint">
-                <span>SCROLL</span>
-                <div class="scroll-arrow">↓</div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         الصفحة الثانية: الموعد
-    ====================================================== -->
-
-    <section class="invitation-section date-section">
-
-        <div class="section-content">
-
-            <p class="section-small">
-                مَوْعِدُنَا
-            </p>
-
-            <h1>
-                ١ يناير ٢٠٢٧
-            </h1>
-
-            <p class="section-text">
-                يَوْمُ الجُمُعَة
-            </p>
-
-            <div class="event-time">
-
-                <span>
-                    ٣:٠٠ مساءً
-                </span>
-
-                <span class="time-line">
-                    —
-                </span>
-
-                <span>
-                    ٦:٠٠ مساءً
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         الصفحة الثالثة: التفاصيل
-    ====================================================== -->
-
-    <section class="invitation-section details-section">
-
-        <div class="section-content">
-
-            <p class="section-small">
-                بِكُلِّ حُبٍّ
-            </p>
-
-            <p class="section-text">
-                بِكُمُ سَيَكتَمِلُ الفَرَحُ
-            </p>
-
-            <div class="details">
-
-                <p>
-                    Sama Hall
-                </p>
-
-                <p>
-                    Quesna City
-                </p>
-
-                <p>
-                    view location
-                </p>
-
-                <!-- الموقع -->
-
-                <div style="
-                    width: 85%;
-                    max-width: 450px;
-                    height: 180px;
-                    margin: 25px auto 0;
-                    border: 2px solid #d4af37;
-                    border-radius: 10px;
-                    overflow: hidden;
-                ">
-
-                    <a
-                        href="https://maps.app.goo.gl/gpDQMfUdVRqxVugMA?g_st=iw"
-                        target="_blank"
-                        style="
-                            display: block;
-                            width: 100%;
-                            height: 100%;
-                        "
-                    >
-
-                        <img
-                            src="images/location.png"
-                            alt="Wedding Location"
-                            style="
-                                width: 100%;
-                                height: 100%;
-                                display: block;
-                                object-fit: cover;
-                            "
-                        >
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- =================================================
-                 العد التنازلي
-            ================================================== -->
-
-            <div id="countdown">
-
-                <div>
-                    <span id="days">00</span>
-                    <small>Days</small>
-                </div>
-
-                <div>
-                    <span id="hours">00</span>
-                    <small>Hours</small>
-                </div>
-
-                <div>
-                    <span id="minutes">00</span>
-                    <small>Minutes</small>
-                </div>
-
-                <div>
-                    <span id="seconds">00</span>
-                    <small>Seconds</small>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         الظرف
-    ====================================================== -->
-
-    <div id="intro">
-
-        <div
-            class="envelope"
-            onclick="openInvitation()"
-        >
-
-            <!-- الكارت داخل الظرف -->
-
-            <div class="invitation-paper">
-
-                <div class="names">
-
-                    <span>
-                        محمد
-                    </span>
-
-                    <span class="heart">
-                        ♥️
-                    </span>
-
-                    <span>
-                        إيمان
-                    </span>
-
-                </div>
-
-                <div class="quran-verse">
-                    ﴿وَخَلَقْنَاكُمْ أَزْوَاجًا﴾
-                </div>
-
-            </div>
-
-
-            <!-- غطاء الظرف -->
-
-            <div class="envelope-flap"></div>
-
-
-            <!-- جسم الظرف -->
-
-            <div class="envelope-body">
-
-                <div class="wax-seal">
-                    M&E
-                </div>
-
-                <div class="envelope-title">
-                    دَعْوَةُ عَقْدِ قِرَانٍ
-                </div>
-
-            </div>
+            <button
+                class="seal-button"
+                onclick="openInvitation()"
+                aria-label="فتح الدعوة">
+            </button>
 
         </div>
 
     </div>
 
 
+    <!-- الدعوة -->
+
+    <main id="invitation">
+
+        <!-- الصفحة الأولى -->
+
+        <section class="page active" id="page1">
+
+            <img
+                src="./images/page1.jpeg"
+                class="page-image"
+                alt="دعوة الزفاف"
+            >
+
+            <button
+                class="next-button"
+                onclick="nextPage()">
+                الصفحة التالية
+            </button>
+
+
+        </section>
+
+
+        <!-- الصفحة الثانية -->
+
+        <section class="page" id="page2">
+
+            <img
+                src="file:///C:\Users\pc\Desktop\wedding invitation\images/page2.jpeg"
+                class="page-image"
+                alt=" page2"
+            >
+            <div class="event-info">
+
+                <div class="countdown">
+                    <div>
+                       <span id="days">00</span>
+                       <small>يوم</small>
+                    </div>
+
+                    <div>
+                     <span id="hours">00</span>
+                     <small>ساعة</small>
+                    </div>
+
+                    <div>
+                     <span id="minutes">00</span>
+                     <small>دقيقة</small>
+                    </div>
+
+                    <div>
+                     <span id="seconds">00</span>
+                     <small>ثانية</small>
+                    </div>
+                </div>
+
+                <a
+                 href="https://maps.google.com/?q=30.546118,31.157267"
+                 target="_blank"
+                 class="location-button">
+                 <img src="./images/location.png" alt="location">
+        
+                 <span>view location</span>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+
     <script src="script.js"></script>
 
 </body>
-
 </html>
