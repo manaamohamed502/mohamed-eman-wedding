@@ -291,7 +291,7 @@ body {
 .location-button {
     position: absolute;
 
-    top: 45px;
+    top: 55px;
     left: 50%;
 
     transform: translateX(-50%);
