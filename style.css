@@ -316,4 +316,14 @@ body {
 }
 .location-button {
     transform: translateY(90px);
+}#page2 {
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 999 !important;
+}
+
+#page2 .page-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
 }
