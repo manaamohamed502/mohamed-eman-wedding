@@ -220,134 +220,118 @@ body {
 
 
 /* =========================
-   معلومات الصفحة الثانية
+   إطار الصفحة الثانية
 ========================= */
+.page2-frame {
+   position: relative;
+    
+    aspect-ratio: 726/1280;
 
+    width: auto;
+    height: auto;
+
+    max-width: 100vw;
+    max-height: 100vh;
+
+    margin: auto;
+}
+/* الصورة */
+.page2-frame > .page-image {
+    position: relative;
+    
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+
+    display: block;
+}
+/* =========================
+   المجموعة المرتبطة بالصورة
+========================= */
 .event-info {
     position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
+    inset: 0;
+    width: 100%;
+    height: 100%;
     z-index: 30;
+    pointer-events: none;
 }
-
-
 /* =========================
-   العد التنازلي
+   Countdown
 ========================= */
-
 .countdown {
+    position: absolute;
+    top: calc(50% - 30px) ;
+    left: 50%;
+    transform:
+        translate(-50%, -50%)
+        translateY(-15px);
     display: flex;
-
     gap: 5px;
-
     direction: ltr;
-
-    transform: translateY(-90px);
 }
-
 .countdown div {
-    width: 50px;
-    height: 50px;
-
+    width: 30px;
+    height: 30px;
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
-
     background: rgba(241, 239, 239, 0.9);
-
     border-radius: 8px;
 }
-
 .countdown span {
     font-size: 15px;
-
     font-weight: bold;
-
     color: #3d5153;
 }
-
 .countdown small {
     font-size: 8px;
-
     color: #233031;
 }
-
-
 /* =========================
-   الموقع
+   Location
 ========================= */
-
 .location-button {
     position: absolute;
-
-    top: 0px;
+    top: calc(50% + 40px);
     left: 50%;
-
     transform: translateX(-50%);
-
     width: 120px;
     height: 80px;
-
+    display: block;
     padding: 0;
     margin: 0;
-
-    display: block;
-
     background: transparent;
-
-    border-radius: 0;
-
-    z-index: 40;
-
     text-decoration: none;
+    z-index: 40;
+    pointer-events: auto;
 }
-
 .location-button img {
-    width: 97%;
-    height: 97%;
-
+    width: 100%;
+    height: 80px;
     object-fit: cover;
-
     display: block;
-
     border: 1px solid #233031;
-
     border-radius: 10px;
 }
-
 .location-button span {
+    display: block;
     margin-top: 5px;
-
     font-size: 11px;
-
+    text-align: center;
     white-space: nowrap;
-
-   text-align: center;
-
     color: #3d5153;
-
-    text-decoration: none;
-
     animation: locationText 2s ease-in-out infinite;
 }
-
 @keyframes locationText {
     0%, 100% {
         transform: translateX(-2px);
     }
-
     50% {
-        transform: translateY(3px);
+        transform: translateX(3px);
     }
 }
